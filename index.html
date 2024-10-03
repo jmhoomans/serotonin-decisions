@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Serotonine en Beslissingen </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/donders_d.svg" rel="icon">
+  <link href="assets/img/donders_d.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Remember
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+<!-- STYLE FOR THE DROPDOWN MENU -->
+  <style>
+    #languageDropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    #languageDropdown img {
+        width: 15px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        z-index: 1;
+    }
+
+    .dropdown-content img {
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .en .nl {
+        display: none;
+    }
+
+    .en .en {
+        display: block;
+    }
+
+    .nl .en {
+        display: none;
+    }
+
+    .nl .nl {
+        display: block;
+    }
+  </style>
+
+</head>
+
+<body class="nl">
+
+  <!--START LANGUAGE DROPDOWN MENU-->
+
+  <script>
+    function toggleDropdown() {
+        var dropdownContent = document.querySelector('.dropdown-content');
+        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function changeLanguage(lang) {
+        var flagImage = document.getElementById('currentFlag');
+        document.body.className = lang; // Set the body class to the selected language
+        flagImage.src = 'assets/img/flags/' + lang + '-flag.png';
+        toggleDropdown(); // Hide the dropdown after changing language
+    }
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (event) {
+        var dropdown = document.getElementById('languageDropdown');
+        if (!dropdown.contains(event.target)) {
+            document.querySelector('.dropdown-content').style.display = 'none';
+        }
+    });
+
+    // Set initial flag based on default language
+    document.getElementById('currentFlag').src = 'assets/img/flags/' + document.body.className + '-flag.png';
+  </script>
+
+  <!-- EXAMPLE CODE FOR TEXT CHANGE ACROSS LANGUAGES:
+
+    <div class="language-switch-section">
+        <h1 id="header">
+          <span class="en">Serotonine and Decisions</span>
+          <span class="nl">Serotonine en Beslissingen</span>
+        </h1>
+      </div>
+
+  -->
+
+  <!-- LANGUAGE DROPDOWN MENU END-->
+
+  <!-- ======= Top Bar =======
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">serotonin.decisions@donders.ru.nl </a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <div class="language-switch-section">
+          <h1 class="text-light">
+            <span class="nl"><a href="index.html">Serotonine</a></span>
+            <span class="en"><a href="index.html">Serotonin</a></span>
+          </h1>
+        </div>
+
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--<a href="index.html"><img src="assets/img/donders_logo.svg" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+
+        <div id="languageDropdown">
+          <img id="currentFlag" src="assets/img/flags/nl-flag.png" alt="Dutch" onclick="toggleDropdown()">
+          <div class="dropdown-content">
+              <img src="assets/img/flags/en-flag.png" alt="English" onclick="changeLanguage('en')">
+              <img src="assets/img/flags/nl-flag.png" alt="Dutch" onclick="changeLanguage('nl')">
+          </div>
+        </div>
+
+        <ul>
+
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li>
+            <span class="nl"><a class="nav-link scrollto" href="#achtergrond">Achtergrond</a></span>
+            <span class="en"><a class="nav-link scrollto" href="#achtergrond">Background</a></span>
+          </li>
+          <li>
+            <span class="nl"><a class="nav-link scrollto" href="#informatie">Informatie</a></span>
+            <span class="en"><a class="nav-link scrollto" href="#informatie">Information</a></span>
+          </li>
+          <li>
+            <span class="nl"><a class="nav-link scrollto " href="#cta">Aanmelden</a></span>
+            <span class="en"><a class="nav-link scrollto " href="#cta">Register</a></span>
+          </li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+
+          <!--<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+            -->
+          <!-- </li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= TITLE section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <div class="language-switch-section">
+        <h1 id="header.large-title">
+          <span class="en">Serotonine and Decisions</span>
+          <span class="nl">Serotonine en Beslissingen</span>
+        </h1>
+        <h2 id="subheader">
+          <span class="en">How does serotonin influence our daily-decision making?</span>
+          <span class="nl">Hoe beïnvloedt serotonine het maken van onze dagelijkse beslissingen?</span>
+        </h2>
+          <span class="en"><a href="#cta" class="btn-get-started scrollto">Register for this study</a></span>
+          <span class="nl"><a href="#cta" class="btn-get-started scrollto">Aanmelden voor het onderzoek</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= ACHTERGROND Section ======= -->
+    <section id="achtergrond" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch py-5 px-lg-5">
+            <div class="box-heading" data-aos="fade-up">
+              <div class="language-switch-section">
+                <h4>
+                  <span class="nl">Achtergrond</span>
+                  <span class="en">Background</span>
+                </h4>
+                <h3>
+                  <span class="nl">Achtergrond en doel van het onderzoek</span>
+                  <span class="en">Background and goal of our study</span>
+                </h3>
+                <p>
+                  <span class="nl">
+                    In het dagelijkse leven, op school of op het werk maken we constant beslissingen.
+                    We zijn gemotiveerd, of juist helemaal niet, om iets te ondernemen.
+                    Serotonine blijkt een belangrijke stof in deze processen.
+                    Omdat deze processen erg complex zijn, weten we nog niet precies hoe de rol van serotonine hier precies in elkaar zit.
+                    In deze studie is het ons doel om te kijken hoe veranderingen in serotonine in de hersenen leren en besluitvorming beïnvloeden.
+                    Om dat doel te bereiken zullen gebruiken we medicatie die serotonine (escitalopram) in het brein beinvloedt.
+                  </span>
+                  <span class="en">
+                    In daily life, at school or at work we constantly make decisions.
+                    We might be extremely motivated to do something, or not at all.
+                    Previous findings suggest that serotonin might be an important substance in these processes.
+                    But, because these processes are rather complex, we don't yet know the exact role serotonin has to play in them.
+                    In this study, we aim to find out how changes in serotonin levels in your brain affect learning and decision-making.
+                    To accomplish this goal, we will give you either a medication that makes your serotonin work better (escitalopram) or a placebo.
+                  </span>
+                </p>
+
+                <img src="assets/img/drawings/pills.jpg" class="img-fluid" alt="" width="">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch py-5 px-lg-5">
+            <div class="box-heading" data-aos="fade-up">
+              <div class="language-switch-section">
+
+                <h3>
+                  <span class="nl">Wie mag er deelnemen?</span>
+                  <span class="en">Who can take part?</span>
+                </h3>
+                <p>
+                  <span class="nl">Gezonde individuen tussen 18-40. </span>
+                  <span class="en">Healthy individuals between 18 and 40 years of age. </span>
+                </p>
+
+                <h3>
+                  <span class="nl">Wanneer mag u NIET meedoen?</span>
+                  <span class="en">When CAN'T you participate?</span>
+                </h3>
+                <p>
+                  <span class="nl">U bent zwanger;</span>
+                  <span class="en">You're pregnant;</span>
+                </p>
+                <p>
+                  <span class="nl">U geeft borstvoeding;</span>
+                  <span class="en">You are breast feeding;</span>
+                </p>
+                <p>
+                  <span class="nl">U heeft in het verleden een diagnose van een psychische aandoening (zoals depressie) gehad;</span>
+                  <span class="en">You've had a past diagnosis of a mental illness (such as depression)</span>
+                </p>
+                <p>
+                  <span class="nl">U bent in behandeling geweest met antidepressiva of antipsychotica;</span>
+                  <span class="en">You have been treated with antidepressants or antipsychotics;</span>
+                </p>
+                <p>
+                  <span class="nl">U heeft momenteel of in het verleden zelfmoordgedachtes gehad.</span>
+                  <span class="en">You are currently having or have had suicidal thoughts in the past.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <!--
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Why Us</h2>
+          <h3>Why you shoud <span>choose us</span>?</h3>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="fade-up">
+              <span>01</span>
+              <h4>Lorem Ipsum</h4>
+              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+              <span>02</span>
+              <h4>Repellat Nihil</h4>
+              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <span>03</span>
+              <h4> Ad ad velit qui</h4>
+              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> End Why Us Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <!--
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <!--
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Services</h2>
+          <h3>Our Awesome <span>Services</span></h3>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box" data-aos="zoom-in">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Sed ut perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Dele cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">Divera don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Services Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <!--
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Portfolio</h2>
+          <h3>Check our <span>Portfolio</span></h3>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-meetmomenten">meetmomenten</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-meetmomenten">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>meetmomenten</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Portfolio Section -->
+
+<!-- ======= INFORMATIE Section ======= -->
+
+    <section id="informatie" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <div class="language-switch-section">
+            <h2>
+              <span class="nl">Meer informatie</span>
+              <span class="en">More information</span>
+            </h2>
+            <h3>
+              <span class="nl">Meer informatie over de studie</span>
+              <span class="en">More information on this study</span>
+            </h3>
+            <p>
+              <span class="nl">
+                Klik op <a href="assets/img/pdf/Brochure_NL.pdf">deze link om de brochure</a> met alle uitgebreide informatie over de studie te openen. Hieronder zijn de belangrijkste punten uit de brochure samengevat.
+              </span>
+              <span class="en">
+                Click on <a href="assets/img/pdf/Brochure_EN.pdf">this link to get the brochure</a> with all information on this study. Below you can read through the most important points made in the brochure.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">
+                <div class="language-switch-section">
+                  <span class="nl">Medicatie</span>
+                  <span class="en">Medication</span>
+                </div>
+              <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                  <div class="language-switch-section">
+                    <p>
+                      <span class="nl">U zult worden worden ingedeeld in twee groepen in dit onderzoek. De ene groep ontvangt de medicatie escitalopram en de andere groep zal een placobo ontvangen die geen echte werking heeft. Escitalopram wordt onder andere voorgeschreven voor behandelingen van depressie en angststoornissen. Het is erg belangrijk dat u zich houdt aan de afspraken die we met u maken!</span>
+                      <span class="en">You will be assigned to two groups in this study. One group will receive the medication escitalopram, and the other group will receive a placebo that has no actual effect. Escitalopram is prescribed for the treatment of depression and anxiety disorders, among other conditions. It is crucial that you adhere to the agreements we make with you!</span>
+                    </p>
+                  </div>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">
+                <div class="language-switch-section">
+                  <span class="nl">Hoe verloopt het onderzoek?</span>
+                  <span class="en">Wat happens during the study?</span>
+                </div>
+              <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <div class="language-switch-section">
+                  <span class="nl">
+                    <p> In dit onderzoek zal u drie keer langs komen bij de onderzoekers van het Donders Centre for Cognition. Thuis vult u een vragenlijst in na de intakesessie én u zal de studiemedicatie innemen gedurende 2 à 3 weken. </p>
+                    <ol type="1">
+                      <li>Eerst is er een intakegesprek via de telefoon. Hier nemen we samen met u een medische vragenlijst door.</li>
+                      <li>U zult daarna worden uitgenodigd voor een intakesessie in het Maria Montessorigebouw op de Radboud Universiteit. Tijdens deze sessie vult u vragenlijsten in, meten we uw bloeddruk en hartslag. Ook zal u een aantal taken op de computer uitvoeren. Deze sessie duurt ongeveer 3 uur.</li>
+                      <li>Na afloop vul u thuis een aantal online vragenlijsten in. Dit duurt ongeveer 1 uur. </li>
+                      <li>Tijdens de eerste testsessie kom je weer naar ons onderzoekscentrum in het Maria Montessorigebouw in Nijmegen. Uw bloedruk, hartslag en lichaamstemperatuur zal worden gemeten en u voert een aantal taken op de computer uit. Op het einde van deze sessie krijgt u de studiemedicatie mee naar huis. In totaal zal deze sessie ongeveer 5 uur duren. </li>
+                      <li>Thuis zal u tussen de 2 en 3 weken lang de escitalopram of placebo innemenen. Een lid van het onderzoeksteam zal geregeld contact met u opnemen om te checken of alles goed gaat. </li>
+                      <li>Op de derde en laatste testdag komt u weer naar het Maria Montessorigebouw in Nijmegen. We meten opnieuw  bloeddruk, hartslag en lichaamstemperatuur. Daarna doet u weer een aantal taken op de computer. In totaal duurt deze sessie ongeveer 5 uur. </li>
+                    </ol>
+                  </span>
+                  <span class="en">
+                    <p> In this study you'll visit the researchers of the Donders Centre for Cognition three times. At home, you'll fill in a questionnaire after the intake session. Additionally, you'll take the medication at home for 2 to 3 weeks.</p>
+                    <ol type="1">
+                      <li>The very first step involves a prescreening over the phone. During this phone appointment, we will go through the medical questionnaire that you had to complete before this appointment.</li>
+                      <li>Afterward, you will be invited to an intake session at the Maria Montessori building on the Radboud University campus. During this session, we will administer questionnaires, measure your blood pressure and heart rate, and have you perform certain behavioral tasks. This session lasts approximately 3 hours.</li>
+                      <li>After this session, you will complete several online questionnaires at home, taking about 1 hour.</li>
+                      <li>During the initial testing session, you will return to our research center in the Maria Montessori building on the Radboud campus in Nijmegen. Here, you will fill out several questionnaires; your blood pressure, heart rate, and body temperature will be measured; and you will perform some computer tasks (lasting about three hours). Women will be offered a pregnancy test to ensure there is no pregnancy. At the end of this session, you will receive the medication pot to take home. Adequate breaks are scheduled, and you will receive a snack from us. In total, this session will take about 5 hours.</li>
+                      <li>At home, you will take the escitalopram or placebo medication for 2 to 3 weeks. You will take one tablet per day. A member of the research team will contact you every 4 days to check if everything is going alright.</li>
+                      <li>On the third and final testing day, you are welcome again at the Maria Montessori building on the Radboud campus in Nijmegen. We will again measure your blood pressure, heart rate, and body temperature. You will also fill out several questionnaires and perform computer tasks lasting about three hours. Adequate breaks are scheduled, and you will receive a snack from us. In total, this session will take about 5 hours.</li>
+                </div>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">
+                <div class="language-switch-section">
+                  <span class="nl">Mogelijke voor- en nadelen van deelname</span>
+                  <span class="en">Possible (dis-)advantages of participation</span>
+                </div>
+              <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <ul>
+                  <div class="language-switch-section">
+                    <span class="nl">
+                      <li><b>Voordelen</b><br>
+                        <ul><li>Behalve de vergoeding zitten er geen directe voordelen aan het onderzoek. Daarentegen helpt u onderzoekers om meer inzicht te krijgen in het menselijke gedrag en het brein.</li></ul>
+                      </li>
+                      <li>
+                        <b>Nadelen</b><br>
+                        <ul>
+                          <li>U kunt last hebben van bijwerkingen van het medicijn/placebo.</li>
+                          <li>U moet zich aan de afspraken houden en erg nauwkeurig de instructies die bij het onderzoek horen opvolgen.</li>
+                          <li>Daarnaast neemt de deelname een aanzienelijke tijd in beslag, mede omdat u drie keer naar het Maria Montessorigebouw moet komen, elke dag medicatie inneemt en gegevens invult op uw telefoon.</li>
+                        </ul>
+                      </li>
+                    </span>
+                    <span class="en">
+                      <li><b>Advantages</b><br>
+                        <ul><li>Except for the monetary compensation, there are no direct advantages of this study for you personally. However, you do help researchers get more insight into human behaviour and the brain.</li></ul>
+                      </li>
+                      <li>
+                        <b>Disadvantages</b><br>
+                        <ul>
+                          <li>You may experience side effects from the medication/placebo.</li>
+                          <li>You are required to adhere to the appointments and follow the instructions associated with the study very carefully.</li>
+                          <li>Additionally, participation involves a significant time commitment, as you need to visit the DCC three times, take a tablet every day, and enter data on your phone.</li>
+                        </ul>
+                      </li>
+                    </span>
+                  </div>
+
+
+                </ul>
+
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">
+                <div class="language-switch-section">
+                  <span class="nl">Mogelijke bijwerkingen en ongemakken</span>
+                  <span class="en">Potential side-effects and discomforts</span>
+                </div>
+              <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <div class="language-switch-section">
+                  <span class="nl">
+                    <p>U zult elke dag escitalopram of placebo ontvangen, gedurende maximaal 21 dagen. In voorgaande onderzoeken is escitalopram aan gezonde deelnemers gegeven zonder dat zij ernstige bijwerkingen ondervonden. Tijdens <b><u>klinische</u></b> behandelingen met escitalopram zijn de meest voorkomende bijwerkingen: <br>
+                      • slaperigheid;<br>
+                      •	moeite met slapen;<br>
+                      •	meer zweten;<br>
+                      •	droge mond;<br>
+                      •	misselijkheid;<br>
+                      •	verminderde eetlust;<br>
+                      •	nervositeit/agitatie;<br>
+                      •	verminderd libido. <br>
+                    Alle procedures die u zult belopen in het onderzoek zijn ongevaarlijk. Sommige procedures kunnen wel als onprettig worden ervaren. In één van de taken die op de computer wordt gedaan zal een vervelend geluid worden afgespeeld die als irritant kan worden ervaren.
+                  </p>
+                  </span>
+                  <span class="en">
+                    <p>You will receive escitalopram or a placebo every day for a maximum of 21 days. In previous studies, escitalopram has been given to healthy participants without them experiencing severe side effects. The most common side effects during <b><u>clinical</u></b> treatments with escitalopram include:<br>
+                      • drowsiness;<br>
+                      •	difficulty sleeping;<br>
+                      •	increased sweating;<br>
+                      •	dry mouth;<br>
+                      •	nausea;<br>
+                      •	decreased appetite;<br>
+                      •	nervousness/agitation;<br>
+                      •	decreased libido. <br>
+                      All procedures you will undergo in the study are harmless. Some procedures may be perceived as unpleasant. In one of the computer tasks, an annoying sound will be played, which may be experienced as irritating.
+                  </p>
+                  </span>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section> <!--End F.A.Q Section -->
+
+    <!-- ======= AANMELDEN Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="language-switch-section">
+          <span class="nl">
+            <div class="text-center">
+              <h3>Aanmelden voor ons onderzoek</h3>
+              <p>Bent u geïnteresseerd in het onderzoek geraakt? Meld u dan nu aan via de onderstaande knop. Tot snel in het lab! </p>
+              <a class="cta-btn" href="https://radboud.sona-systems.com/" target="_blank">Aanmelden</a> <!--target="_blank" opens link in new tab -->
+            </div>
+          </span>
+          <span class="en">
+            <div class="text-center">
+              <h3>Register for our study</h3>
+              <p>Have you become interested in our study? Sign-up using the button below. See you soon in the lab! </p>
+              <a class="cta-btn" href="https://radboud.sona-systems.com/" target="_blank">Register</a> <!--target="_blank" opens link in new tab -->
+            </div>
+          </span>
+        </div>
+
+
+      </div>
+    </section> <!-- End AANMELDEN Section -->
+
+    <!-- ======= HET ONDERZOEKSTEAM Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Team</h2>
+          <div class="language-switch-section">
+            <span class="nl">
+              <h3>Het Onderzoeksteam</h3>
+              <p>Het onderzoeksteam is onderdeel van het <a href="https://www.denoudenlab.org/">Learning and Decision-making lab</a>. Klik op de link om naar de lab website te gaan.</p>
+            </span>
+            <span class="en">
+              <h3>The Research Team</h3>
+              <p>The research team is part of the <a href="https://www.denoudenlab.org/">Learning and Decision-making lab</a>. Click on the link to go to the lab website.</p>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up">
+              <div class="member-img">
+                <img src="assets/img/team/hanneke.jpg" class="img-fluid" alt="">
+                <!--<div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+              </div>
+              <div class="member-info">
+                <h4>Hanneke den Ouden</h4>
+                <span>Learning & Decision-making lab director</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/bertalan.png" class="img-fluid" alt="">
+                <!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+              </div>
+              <div class="member-info">
+                <h4>Bertalan Polner</h4>
+                <span>Post-doc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/team/renee.jpg" class="img-fluid" alt="">
+                <!--<div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>-->
+              </div>
+              <div class="member-info">
+                <h4>Renée Koolschijn</h4>
+                <span>Post-doc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/team/julie.jpg" class="img-fluid" alt="">
+                <!--<div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>-->
+              </div>
+              <div class="member-info">
+                <h4>Julie Hoomans</h4>
+                <span>Master student</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/team/rares.jpg" class="img-fluid" alt="">
+                <!--<div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>-->
+              </div>
+              <div class="member-info">
+                <h4>Rares Radulescu</h4>
+                <span>Master student</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!--
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div> End testimonial item -->
+      <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div> End testimonial item -->
+      <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div> End testimonial item -->
+      <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div> End testimonial item -->
+      <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div> End testimonial item -->
+      <!--
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> End Testimonials Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <!--
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Pricing</h2>
+          <h3>Check our <span>Pricing</span></h3>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
+              <span class="recommended-badge">Recommended</span>
+              <h3>Business</h3>
+              <h4><sup>$</sup>19<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <h3>Developer</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Pricing Section -->
+
+    <!-- ======= Contact Section ======= -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-in">
+          <h2>Contact</h2>
+          <h3>Contactgegevens</h3>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="info">
+
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <div class="language-switch-section">
+                  <span class="nl">
+                    <h4>Locatie:</h4>
+                    <p>Maria Montessorigebouw, kamer 01.302</p>
+                  </span>
+                  <span class="en">
+                    <h4>Location:</h4>
+                    <p>Maria Montessori building, room 01.302</p>
+                  </span>
+                </div>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>serotonin.decisions@donders.ru.nl</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <div class="language-switch-section">
+                  <span class="nl">
+                    <h4>Telefoonnummer:</h4>
+                    <p>TBD</p>
+                  </span>
+                  <span class="en">
+                    <h4>Phone number:</h4>
+                    <p>TBD</p>
+                  </span>
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+          <!-- <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div> -->
+
+        </div>
+
+      </div>
+    </section> <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+<!--
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>Remember</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+          </div>
+        </div>
+
+        <div class="row footer-newsletter justify-content-center">
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="container footer-bottom clearfix">
+      <!--<div class="copyright">
+        &copy; Copyright <strong><span>Remember</span></strong>. All Rights Reserved
+      </div> -->
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> <br>
+        Flag icons by <a href="https://www.flaticon.com/free-icons/uk-flag" title="uk flag icons">Freepik - Flaticon</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
